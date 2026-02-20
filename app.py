@@ -89,6 +89,7 @@ def update_graph(param):
 # -------------------------------
 # اجرای برنامه
 # -------------------------------
-if name == "__main__":
-    port = int(os.environ.get("PORT", 10000))  # Render خودش پورتی اختصاص می‌دهد
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 10000))
     app.run_server(host="0.0.0.0", port=port, debug=True)
